@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Button from './components/button/button';
+import Header from './components/header/header';
 
 function App() {
+
+  const [carregando, setCarregando] = useState(true)
+  const [contador, setContador] = useState(0)
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div >
+    {carregando ? <span>Carregando...</span> : 
+
+    <div>
+         <button onClick={() => setContador(contador + 1)} >Adicionar</button> 
+         <span>{contador}</span>
+
     </div>
+  }
+ 
+    <button onClick={() => setCarregando(!carregando)}>{carregando ? 'Carregar site' : 'Voltar para carregamento'}</button>
+    <Button name='Alterar valor' active onClick={setContador} />
+  </div>
   );
 }
 
