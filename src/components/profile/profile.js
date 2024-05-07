@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
+import { UserContext } from "../../contexts/userContext";
 
 function Profile(){
+    const {login} = useContext(UserContext)
+
     return (
         <div>
-            Faça o seu login para ter acesso as informações
+            {login? 'dados do usuário' : 'Faça o seu login para ter acesso as informações'}
         </div>
     )
 
