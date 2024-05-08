@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { useParams } from 'react-router-dom';
 
-function Fotos(){
+function Detalhes(){
+    const params = useParams()
+    console.log(params.id)
+
+    useEffect(() => {}, [] )
+
     return (
         <div>
-            Fotos
-            
+            Detalhes       
         </div>
     )
 }
-export default Fotos;
+
+export default Detalhes;

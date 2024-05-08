@@ -1,6 +1,7 @@
 import React from 'react'
-import Profile from '../../profile/profile';
+import { Link, useLocation } from 'react-router-dom';
 import Header from '../../header/header';
+
 
 function Home(){
     const produtos = [
@@ -9,12 +10,19 @@ function Home(){
         {nome: 'Computador', id: 30},
     ]
 
+    const location = useLocation();
+
+    console.log(location)
+
 
 
     return (
         <div>
-            {produtos.map((produto) => (
+                <Header nome='Tamara' age={22} active={true} />
+            {produtos.map((produto, index) => (
+                <Link key={index} to={`detalhes/${produto.id}`}>
                 <span style={{ display: 'block' }}>{produto.nome}</span>
+                </Link>
             ))}
             
         </div>
