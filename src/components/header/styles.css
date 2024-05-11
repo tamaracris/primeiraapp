@@ -1,9 +1,37 @@
-ul {
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+header {
+    height: 92px;
     display: flex;
-    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
 }
 
 li {
     list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+li:hover {
+    color: red;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
 }

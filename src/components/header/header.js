@@ -1,33 +1,25 @@
-import React, { useContext, useEffect } from 'react'
-import './styles.css'
-import { UserContext } from '../../contexts/userContext';
+import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import './styles.css'
+import Logo from '../assets/logo.png';
 
-function Header({ nome }){
-    const {login, setLogin} = useContext(UserContext);
-    const navigate = useNavigate();
-
-    const active = false; 
-
+function Header({ }){
     return (
-        <div>
+        <header>
+            <img id='logo' src={Logo} />
             <nav>
                 <ul>
-                    <Link to='/'><li>Home</li></Link>
+                    <Link style={{ textDecoration: 'none'}} to='/'><li>Home</li></Link>
 
-                <Link to='/fotos'><li>Fotos</li></Link>
-                <Link to='/Contato'><li>Contato</li></Link>
-                <li onClick={() => navigate('contato')}>Login</li>
-                <li>{nome}</li>
+                <Link style={{ textDecoration: 'none'}} to='/Contato'><li>Contato</li></Link>
+                <Link style={{ textDecoration: 'none'}} to='/Contato'><li>Fotos</li></Link>
+                <li>Comentários</li>
+
                 </ul>
             </nav>
-        </div>
+        </header>
     )
 }
 
-Header.propTypes = {
-    nome: PropTypes.string.isRequired
-}
 
 export default Header;

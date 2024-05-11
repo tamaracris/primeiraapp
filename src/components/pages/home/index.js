@@ -1,31 +1,28 @@
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import React, { lazy, Suspense, useState } from 'react'
 import Header from '../../header/header';
+import './styles.css';
+import Video from '../../assets/videobt.mp4'
 
 
 function Home(){
-    const produtos = [
-        {nome: 'Batedeira', id: 20},
-        {nome: 'Ventilador', id: 22},
-        {nome: 'Computador', id: 30},
-    ]
-
-    const location = useLocation();
-
-    console.log(location)
-
-
 
     return (
-        <div>
-                <Header nome='Tamara' age={22} active={true} />
-            {produtos.map((produto, index) => (
-                <Link key={index} to={`detalhes/${produto.id}`}>
-                <span style={{ display: 'block' }}>{produto.nome}</span>
-                </Link>
-            ))}
-            
+        <>
+        <Header/>
+        <div id='banner'></div>
+        <div id='trailer-container' >
+            <div className='content' >
+                <video controls className='trailer' >
+                    <source src={Video} />
+
+                </video>
+
+            </div>
+
         </div>
-    )
+
+        </>
+            )
 }
+
 export default Home;

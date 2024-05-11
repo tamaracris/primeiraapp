@@ -5,7 +5,10 @@ function Detalhes(){
     const params = useParams()
     console.log(params.id)
 
-    useEffect(() => {}, [] )
+    useEffect(() => {
+        
+
+    }, [] )
 
     return (
         <div>
