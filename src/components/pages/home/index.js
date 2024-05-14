@@ -3,6 +3,8 @@ import Header from '../../header/header';
 import './styles.css';
 import Video from '../../../assets/videobt.mp4'
 import Cards from '../../cards';
+import Footer from '../../footer/footer';
+
 
 
 function Home(){
@@ -29,11 +31,7 @@ function Home(){
         </div>
         <Cards />
 
-        <footer>
-
-            <span>Todos os direitos reservados ©</span>
-            <span>Desenvolvido por Tamara Cristina</span>
-            </footer>
+        <Footer/>
 
         </>
             )
