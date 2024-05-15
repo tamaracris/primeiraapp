@@ -1,0 +1,34 @@
+#comment{
+    width: 100%;
+    max-width: 800px;
+    color: rgb(246, 244, 180);
+    text-align: left;
+    font-size: 19px;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'kdam Thmor Pro', sans-serif;
+    margin-left: 350px;
+
+
+
+}
+
+h1 {
+    color: rgb(255, 253, 107);
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #comment {
+        width: 100%;
+        margin-left: 0;
+
+    
+    }
+
+
+}

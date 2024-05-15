@@ -10,6 +10,7 @@ import Image6 from '../../Imagens/6c.webp';
 import Image7 from '../../Imagens/7c.webp';
 import Image8 from '../../Imagens/8c.webp';
 import Image9 from '../../Imagens/9c.webp';
+import Footer from '../../footer/footer';
 
 function Fotos(){
     return (
@@ -53,7 +54,7 @@ function Fotos(){
         </div>
 
             
-
+        <Footer/>
         </>
         )
 }

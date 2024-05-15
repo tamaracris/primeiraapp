@@ -1,6 +1,8 @@
 import React from 'react'
 import './styles.css'
 import Header from '../../header/header';
+import Footer from '../../footer/footer';
+
 
 function Contato(){
     return (
@@ -78,6 +80,7 @@ function Contato(){
 </form>
 
 </div>
+        <Footer />
 
         </>
 

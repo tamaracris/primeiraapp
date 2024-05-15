@@ -46,7 +46,7 @@
     background-color: rgb(255, 213, 0);
     color: rgb(0, 0, 0);
     padding: 8px 10px;
-    border-radius: 5px;
+    border-radius: 80px;
     cursor: pointer;
     transition: .8s;
     font-size: 19px;
@@ -121,7 +121,7 @@ footer {
     }
 
     .button {
-        width: 80%;
+        width: 100%;
         margin-top: 30px;
     }
 
